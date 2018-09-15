@@ -3,12 +3,10 @@ body {
   padding: 0;
   height: 100vh;
   font-family: "Courier New";
-  background: rgb(2, 45, 105);
   background: linear-gradient(
     100deg,
-    rgba(2, 45, 105, 1) 25%,
-    rgba(14, 70, 64, 1) 62%,
-    rgba(94, 117, 38, 1) 100%
+    rgb(30, 92, 180) 65%,
+    rgb(240, 188, 94) 100%
   );
   text-align: center;
 }

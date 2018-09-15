@@ -9,7 +9,7 @@ import "./App.css";
 const particlesOptions = {
   particles: {
     number: {
-      value: 30,
+      value: 70,
       density: {
         enable: true,
         value_area: 800
@@ -19,6 +19,18 @@ const particlesOptions = {
 };
 
 class App extends Component {
+  state = {
+    input: ""
+  };
+
+  onInputChange = e => {
+    console.log(e.target.value);
+  };
+
+  onButtonSubmit = () => {
+    console.log("click");
+  };
+
   render() {
     return (
       <div>
@@ -26,7 +38,10 @@ class App extends Component {
         <Navigation />
         <Logo />
         <Rank />
-        <ImageLinkForm />
+        <ImageLinkForm
+          onInputChange={this.onInputChange}
+          onButtonSubmit={this.onButtonSubmit}
+        />
         {/*
         <FaceRecognition />*/}
       </div>
