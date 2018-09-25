@@ -1,4 +1,8 @@
 .Tilt {
   background: rgb(30, 92, 180);
   box-shadow: 1px 3px 9px rgb(240, 188, 94);
+  height: 100px;
+  width: 100px;
+  margin-top: 1rem;
+  padding: 10px;
 }

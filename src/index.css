@@ -1,18 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  /* font-family: "Roboto Mono", monospace; */
   font-family: "Share Tech Mono", monospace;
-  background: linear-gradient(
-    100deg,
-    rgb(30, 92, 180) 65%,
-    rgb(240, 188, 94) 100%
-  );
+  background: rgb(30, 92, 180);
   text-align: center;
   color: white;
-}
-
-button {
-  cursor: pointer;
 }
