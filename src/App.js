@@ -13,10 +13,9 @@ const app = new Clarifai.App({
 const particlesOptions = {
   particles: {
     number: {
-      value: 70,
+      value: 30,
       density: {
-        enable: true,
-        value_area: 1000
+        enable: true
       }
     }
   }
@@ -26,7 +25,8 @@ class App extends Component {
   state = {
     input: "",
     imageUrl: "",
-    box: {}
+    box: {},
+    showImage: false
   };
 
   calculateFaceLocation = data => {
@@ -55,6 +55,7 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({ imageUrl: this.state.input });
+    this.setState({ showImage: true });
 
     app.models
       .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
@@ -65,7 +66,7 @@ class App extends Component {
   };
 
   render() {
-    const { imageUrl, box } = this.state;
+    const { imageUrl, box, showImage } = this.state;
     return (
       <div>
         <Particles className="particles" params={particlesOptions} />
@@ -75,7 +76,7 @@ class App extends Component {
             onInputChange={this.onInputChange}
             onPictureSubmit={this.onPictureSubmit}
           />
-          <FaceRecognition box={box} imageUrl={imageUrl} />
+          {showImage && <FaceRecognition box={box} imageUrl={imageUrl} />}
         </React.Fragment>
       </div>
     );

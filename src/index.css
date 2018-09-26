@@ -6,3 +6,10 @@ body {
   text-align: center;
   color: white;
 }
+
+@media only screen and (max-width: 680px) {
+  body {
+    font-size: 14px;
+    padding: 0.8rem;
+  }
+}

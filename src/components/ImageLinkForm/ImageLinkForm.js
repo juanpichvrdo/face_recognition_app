@@ -4,9 +4,9 @@ import "./ImageLinkForm.css";
 const ImageLinkForm = ({ onInputChange, onPictureSubmit }) => {
   return (
     <div>
-      <p className="f3 tc white">
+      <h1 className="f3 tc white">
         This app will detect faces in your pictures. Give it a try!
-      </p>
+      </h1>
       <p className="f3 tc white" style={{ fontSize: "15px" }}>
         Enter a link for a picture with a face below
       </p>
