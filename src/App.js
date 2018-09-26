@@ -70,14 +70,13 @@ class App extends Component {
     return (
       <div>
         <Particles className="particles" params={particlesOptions} />
-        <React.Fragment>
-          <Logo />
-          <ImageLinkForm
-            onInputChange={this.onInputChange}
-            onPictureSubmit={this.onPictureSubmit}
-          />
-          {showImage && <FaceRecognition box={box} imageUrl={imageUrl} />}
-        </React.Fragment>
+
+        <Logo />
+        <ImageLinkForm
+          onInputChange={this.onInputChange}
+          onPictureSubmit={this.onPictureSubmit}
+        />
+        {showImage && <FaceRecognition box={box} imageUrl={imageUrl} />}
       </div>
     );
   }

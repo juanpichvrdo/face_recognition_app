@@ -7,11 +7,12 @@ const ImageLinkForm = ({ onInputChange, onPictureSubmit }) => {
       <h1 className="f3 tc white">
         This app will detect faces in your pictures. Give it a try!
       </h1>
-      <p className="f3 tc white" style={{ fontSize: "15px" }}>
-        Enter a link for a picture with a face below
-      </p>
       <div className="form">
-        <input type="text" onChange={onInputChange} />
+        <input
+          type="text"
+          onChange={onInputChange}
+          placeholder="Enter a URL for a picture with a face"
+        />
         <button className="btn" onClick={onPictureSubmit}>
           Detect
         </button>
